@@ -1,0 +1,89 @@
+Bootstrap: docker
+From: ubuntu:20.04
+
+IncludeCmd: yes
+
+%labels
+    MAINTAINER Kyrylo Bessonov
+    VERSION v0.0.1
+
+%environment
+    DEBIAN_FRONTEND="noninteractive"
+
+%post
+    /usr/bin/apt-get update && /usr/bin/apt-get -y upgrade
+    /usr/bin/apt-get update --fix-missing
+    /usr/bin/apt-get install -y tzdata
+    /usr/bin/apt-get install -y texlive	texlive-lang-english texlive-humanities
+
+################### PDFTEX ###################
+%apphelp pdftex
+    For more information about pdftex please visit
+ 
+    * https://www.tug.org/applications/pdftex/
+
+%apprun pdftex
+    pdftex "$@"
+
+################ GHOSTSCRIPT #################
+%apphelp gs
+    For more information about pdftex please visit
+
+    * https://www.ghostscript.com/ 
+
+%apprun gs
+    gs "$@"
+
+################### LATEX ####################
+%apphelp latex
+    For more information about pdftex please visit
+ 
+    * https://www.latex-project.org/
+
+%apprun latex
+    latex "$@"
+
+################## PDFLATEX ##################
+%apphelp pdflatex
+    For more information about pdftex please visit
+ 
+    * https://www.tug.org/applications/pdftex/
+
+%apprun pdflatex
+    pdflatex "$@"
+
+#################### ETEX #####################
+%apphelp etex
+    For more information about pdftex please visit
+ 
+    * https://www.tug.org/applications/pdftex/
+
+%apprun etex
+    etex "$@"
+
+################### TEXMAKER ####################
+%apphelp texmaker
+    For more information about pdftex please visit
+ 
+    * http://www.xm1math.net/texmaker/
+
+%apprun texmaker
+    texmaker "$@"
+
+################### LYX ####################
+%apphelp lyx
+    For more information about Lyx please visit
+    
+    * https://www.lyx.org
+    
+%apprun lyx
+    lyx "$@"
+    
+################### TEXSTUDIO #####################
+%apphelp texstudio
+    For more information about TexStudio please visit
+    
+    * https://www.texstudio.org/
+    
+%apprun texstudio
+texstudio "$@"
