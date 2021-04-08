@@ -1,0 +1,21 @@
+name: nextflow
+channels:
+  - bioconda
+  - r
+  - defaults
+  - conda-forge
+dependencies:
+  - ca-certificates=2021.1.19=hecd8cb5_1
+  - coreutils=8.25=1
+  - curl=7.71.1=hb0a8c7a_1
+  - krb5=1.18.2=h75d18d8_0
+  - libcurl=7.71.1=h8a08a2b_1
+  - libcxx=10.0.0=1
+  - libedit=3.1.20210216=h9ed2024_1
+  - libssh2=1.9.0=ha12b0ac_1
+  - ncurses=6.2=h0a44026_1
+  - nextflow=20.10.0=hecda079_0
+  - openjdk=11.0.6=h7bc2e8c_1
+  - openssl=1.1.1j=h9ed2024_0
+  - zlib=1.2.11=h1de35cc_3
+prefix: /Users/kirill/miniconda/envs/nextflow
