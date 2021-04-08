@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[final]{pdfpages}
+\usepackage{graphicx}
+\begin{document}
+\title{SARS-CoV-2 Wastewater Variant Report}
+\date{\today}
+\author{PHAC}
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+\section{QA Metrics and Visualizations}
+Summary Statistics:
+\begin{itemize}
+\item Number of Ns in Consensus: 461 
+\item Number of Internal Gaps in Consensus versus Reference: 1617
+\item Number of unmapped reads: 0
+\item Number of mapped reads: 84078
+\end{itemize}
+\section{Variant Presence/Absence Summary}
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+common name & pangolin lineage & sig mut & prequirement & Evidence \\
+\hline
+UK & B.1.1.7 & 17 & 5 & None \\
+South Africa & B.1.351 & 5 & 9 & None \\
+Brazil & P.1 & 10 & 17 & None \\
+Nigeria & B.1.525 & 10 & 10 & None \\
+\hline
+\end{tabular}
+\end{center}
+\end{document}
